@@ -1,0 +1,54 @@
+.header {
+  width: 100%;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e0e0e0;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #167136;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link:hover {
+  color: #ffffff;
+}
+
+.isActive {
+  color: #167136;
+}
+
+.isActive::after {
+  width: 100%;
+}
